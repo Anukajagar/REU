@@ -1,0 +1,11 @@
+participant_id,cleaned_path,exists,sample_rate_hz,channels,subtype,duration_s,peak,checks_failed,integrity
+P01,E:\REU_DATA\SPEECH processed\speech\P01\P01_speech_cleaned.wav,True,16000,1,PCM_16,50.178,0.85449,none,PASS
+P02,E:\REU_DATA\SPEECH processed\speech\P02\P02_speech_cleaned.wav,True,16000,1,PCM_16,42.24,0.35129,none,PASS
+P03,E:\REU_DATA\SPEECH processed\speech\P03\P03_speech_cleaned.wav,True,16000,1,PCM_16,41.643,0.31055,none,PASS
+P04,E:\REU_DATA\SPEECH processed\speech\P04\P04_speech_cleaned.wav,True,16000,1,PCM_16,51.328,0.26257,none,PASS
+P05,E:\REU_DATA\SPEECH processed\speech\P05\P05_speech_cleaned.wav,True,16000,1,PCM_16,40.728,0.48004,none,PASS
+P06,E:\REU_DATA\SPEECH processed\speech\P06\P06_speech_cleaned.wav,True,16000,1,PCM_16,78.635,0.52896,none,PASS
+P07,E:\REU_DATA\SPEECH processed\speech\P07\P07_speech_cleaned.wav,True,16000,1,PCM_16,40.96,0.44482,none,PASS
+P08,E:\REU_DATA\SPEECH processed\speech\P08\P08_speech_cleaned.wav,True,16000,1,PCM_16,58.475,0.46054,none,PASS
+P09,E:\REU_DATA\SPEECH processed\speech\P09\P09_speech_cleaned.wav,True,16000,1,PCM_16,40.896,0.46368,none,PASS
+P10,E:\REU_DATA\SPEECH processed\speech\P10\P10_speech_cleaned.wav,True,16000,1,PCM_16,44.48,0.55609,none,PASS

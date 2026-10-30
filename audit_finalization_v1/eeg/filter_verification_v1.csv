@@ -1,0 +1,9 @@
+participant,condition,line_lift_dB_on_filtered,notch_in_reference_chain,max_abs_diff_V,within_tolerance,attenuation_at_50_dB,passband_change_30_40_dB,edge_vs_mid_std,info_highpass,info_lowpass
+P01,calm,14.81,True,5.8203233465475845e-11,True,81.15,-0.01,0.973,1.0,45.0
+P02,speech,12.64,True,5.7975484656080933e-11,True,55.96,-0.01,0.871,1.0,45.0
+P04,maths,15.6,True,1.4548869216573362e-11,True,82.81,-0.01,1.047,1.0,45.0
+P05,meditation,15.41,True,7.273297307312798e-12,True,80.87,-0.01,1.562,1.0,45.0
+P06,maths,12.59,True,2.9103743720559905e-11,True,72.69,-0.01,0.916,1.0,45.0
+P08,meditation,16.73,True,3.6374028517926343e-12,True,98.2,-0.009,1.529,1.0,45.0
+P09,calm,14.85,True,2.908414275474419e-11,True,84.42,-0.01,0.276,1.0,45.0
+P10,speech,14.23,True,1.4512348787965035e-11,True,71.63,-0.011,0.981,1.0,45.0

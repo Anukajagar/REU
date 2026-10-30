@@ -1,0 +1,4 @@
+status,criteria
+EXCLUDED,"feature-input file missing/unreadable, or metadata check failed (labels/rate/sample count), or no valid feature input can be named"
+REVIEW_REQUIRED,any open item: flagged artifact windows > 0; weak raw 50 Hz evidence (< 2x) while a notch was applied; any channel meets INTERPOLATE criteria; ICA output exists but is EXCLUDED or HUMAN_SIGNOFF_PENDING; filter reproduction outside tolerance (tested subset)
+PASS,"all files present and readable; headers verified (Fs, 24 labels, units); notch justified by raw evidence (or absent); no flagged windows; no interpolation recommended; no open ICA action"

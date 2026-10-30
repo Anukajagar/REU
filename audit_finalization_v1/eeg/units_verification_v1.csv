@@ -1,0 +1,5 @@
+participant,condition,acq_units_header,acq_p99_abs_uV,fif_max_abs_V,fif_p99_abs_V,p99_in_eeg_volt_range,max_is_artifact_spike,source_header_in_microvolts,report_claims_volt_conversion
+P01,calm,uVolt,21888.1,0.0017702440964058042,0.00010396793506515675,True,False,True,True
+P05,maths,uVolt,10849.6,0.001024422119371593,6.139602410257789e-05,True,False,True,True
+P07,meditation,uVolt,20093.7,0.023351583629846573,4.777833692060083e-05,True,True,True,True
+P10,speech,uVolt,16908.8,0.0003217617922928184,6.319347696262412e-05,True,False,True,True

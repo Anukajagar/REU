@@ -1,0 +1,11 @@
+participant_id,src_sample_rate_hz,src_n_channels,src_duration_s,src_peak,src_peak_dbfs,src_clipping_pct,src_dc_offset,src_noise_floor_db,src_speech_level_db,src_estimated_snr_db,src_low_snr_flag,src_clipping_flag,src_dc_flag,cln_sample_rate_hz,cln_n_channels,cln_duration_s,cln_peak,cln_peak_dbfs,cln_clipping_pct,cln_dc_offset,cln_noise_floor_db,cln_speech_level_db,cln_estimated_snr_db,cln_low_snr_flag,cln_clipping_flag,cln_dc_flag,low_snr,src_clipping,cln_clipping,dc_issue
+P01,44100,1,50.178,0.86502,-1.26,0.0,-0.0,-41.07,-20.29,20.79,False,False,False,16000,1,50.178,0.85449,-1.37,0.0,-1.5e-05,-41.08,-20.25,20.83,False,False,False,False,False,False,False
+P02,44100,1,42.24,0.35147,-9.08,0.0,-0.000112,-46.67,-28.83,17.85,False,False,False,16000,1,42.24,0.35129,-9.09,0.0,-0.000127,-46.69,-28.82,17.86,False,False,False,False,False,False,False
+P03,44100,1,41.643,0.31039,-10.16,0.0,-0.000121,-46.83,-29.05,17.78,False,False,False,16000,1,41.643,0.31055,-10.16,0.0,-0.000136,-46.97,-29.05,17.92,False,False,False,False,False,False,False
+P04,44100,1,51.328,0.26086,-11.67,0.0,-0.000117,-47.31,-28.52,18.78,False,False,False,16000,1,51.328,0.26257,-11.61,0.0,-0.000132,-47.32,-28.48,18.84,False,False,False,False,False,False,False
+P05,44100,1,40.728,0.47787,-6.41,0.0,-5e-06,-36.39,-22.57,13.82,True,False,False,16000,1,40.728,0.48004,-6.37,0.0,-2.1e-05,-36.4,-22.57,13.83,True,False,False,True,False,False,False
+P06,48000,1,78.635,0.53464,-5.44,0.0,-0.000104,-49.18,-25.8,23.39,False,False,False,16000,1,78.635,0.52896,-5.53,0.0,-0.000119,-49.2,-25.76,23.43,False,False,False,False,False,False,False
+P07,48000,2,40.96,0.59732,-4.48,0.0,-9.7e-05,-45.52,-26.05,19.47,False,False,False,16000,1,40.96,0.44482,-7.04,0.0,-0.000112,-45.69,-25.85,19.84,False,False,False,False,False,False,False
+P08,48000,2,58.475,0.52438,-5.61,0.0,-9.5e-05,-46.68,-27.72,18.96,False,False,False,16000,1,58.475,0.46054,-6.73,0.0,-0.000111,-46.74,-27.68,19.06,False,False,False,False,False,False,False
+P09,48000,2,40.896,0.71387,-2.93,0.0,-9.9e-05,-44.6,-25.0,19.6,False,False,False,16000,1,40.896,0.46368,-6.68,0.0,-0.000114,-44.91,-24.32,20.59,False,False,False,False,False,False,False
+P10,48000,2,44.48,1.0,0.0,0.00302,-0.000157,-44.91,-20.69,24.21,False,True,False,16000,1,44.48,0.55609,-5.1,0.0,-0.000172,-45.61,-20.04,25.57,False,False,False,False,True,False,False

@@ -1,0 +1,4 @@
+status,criteria
+EXCLUDED,"cleaned output failed integrity (missing, unreadable, empty, not 16 kHz mono PCM_16, non-finite samples, clipping in the cleaned file, or duration mismatch > 0.5 s)"
+REVIEW_REQUIRED,any open item measured from the data: estimated SNR < 15 dB; clipping detected in the source; stereo level difference >= 6 dB; any other integrity warning
+PASS,integrity all checks pass; SNR >= 15 dB; no clipping; stereo difference < 6 dB; mono conversion verified; resample verified; 16 kHz suitable for the intended features

@@ -1,0 +1,33 @@
+check,scope,path,result,detail
+baseline_hash_raw,RAW_PROTECTED,P01/..P10 (100 files),PASS,0/0 unchanged
+baseline_hash_v2,NOTEBOOK_V2_PROTECTED,notebooks/*_v2.ipynb,PASS,0/0 unchanged
+baseline_hash_v1,NOTEBOOK_V1_PROTECTED,notebooks/*_v1.ipynb,PASS,0/0 unchanged
+baseline_hash_root,ROOT_PROTECTED,(repo root files),PASS,5/5 unchanged
+documented_changes_this_pass,WORKTREE,(files differing from INVENTORY_BASELINE),PASS,40 files differ from the baseline and were modified during this pass; all 40 are the intentional v3_finalization updates to preprocessing_report.json
+pre_existing_deviations,WORKTREE,(files differing from INVENTORY_BASELINE),INFO,"13 files already differed from the baseline BEFORE this pass (the 2026-10-10 evening speech run): 10 speech quality_report.json, 3 speech non-v3 reports"
+baseline_missing,OTHER,['information\\~$ doubts in REU.docx'],INFO,"1 baseline entries have no file on disk (information\~$ doubts in REU.docx — a Word lock file, not data)"
+raw_data_untouched,RAW_PROTECTED,P01/..P10,PASS,0 raw files modified during this pass
+v1_v2_notebooks_untouched,NOTEBOOK_FROZEN,"notebooks/*_v1.ipynb, *_v2.ipynb",PASS,0 frozen notebooks modified during this pass
+inventory_baseline_untouched,ROOT,INVENTORY_BASELINE.csv,PASS,integrity anchor
+pass_changed_file_count,WORKTREE,(everything),INFO,"121 files modified during this pass (v3 notebooks, v3 reports/figures, reports_final_v3, 40 preprocessing_report.json, temp scripts)"
+coverage,DATASET,raw_acq,PASS,"40 found, 40 expected"
+coverage,DATASET,raw_xlsx,PASS,"40 found, 40 expected"
+coverage,DATASET,raw_speech_wav,PASS,"10 found, 10 expected"
+coverage,DATASET,raw_speech_aac_mp4,PASS,"10 found, 10 expected"
+coverage,DATASET,eeg_cleaned_fif,PASS,"40 found, 40 expected"
+coverage,DATASET,eeg_ica_fif,PASS,"30 found, 30 expected"
+coverage,DATASET,preprocessing_report_json,PASS,"40 found, 40 expected"
+coverage,DATASET,ica_report_json,PASS,"30 found, 30 expected"
+coverage,DATASET,speech_cleaned_wav,PASS,"10 found, 10 expected"
+coverage,DATASET,speech_quality_report_v3,PASS,"10 found, 10 expected"
+no_duplicate_acq_names,DATASET,P*/**/acq,PASS,"40 acq files, 40 unique names"
+qc_rows,EEG,eeg_final_quality_control_v3.csv,PASS,"40 rows; readiness {'REVIEW_REQUIRED': 34, 'PASS': 6}; PASS+REVIEW+FAILED == 40: True"
+bad_channel_register,EEG,v5_bad_channel_review.csv,PASS,119 rows = 110 flagged channel-instances + 9 'no channels flagged' placeholders; 0 verdict INTERPOLATE (0 expected)
+segment_register,EEG,v8_segment_exclusion_register.csv,PASS,"235 spans, 33 recordings, 467 s; 0 duplicate rows; 0 non-positive durations"
+ica_review_log,EEG,figures_v3/ica_review_log.csv,PASS,"{'APPROVED': 25, 'NOT_APPLIED': 10, 'REJECTED': 4, 'PROVISIONAL': 1}; file/JSON cross-check {'OK': 30}; 0 null feature inputs"
+hz50_assessment,EEG,raw_50hz_assessment.csv / v3_50hz_classification.csv,PASS,"40 recordings measured on raw data; classification {'strong': 33, 'mild': 6, 'weak': 1}; weak: ['P02/speech']"
+speech_review,SPEECH,speech_final_quality_review_v3.csv,PASS,"10 rows, readiness {'PASS': 7, 'REVIEW_REQUIRED': 3}"
+speech_log,SPEECH,preprocessing_log_v3.csv,PASS,10 rows; verification_status {'PASS': 10}
+consolidated_summary,BOTH,reports_final_v3/consolidated_preprocessing_summary_v3.csv,PASS,"50 rows ({'eeg': 40, 'speech': 10}); readiness {'REVIEW_REQUIRED': 37, 'PASS': 13}; 0 null feature inputs"
+json_finalization_block,EEG,preprocessing_report.json x40,PASS,40/40 carry a v3_finalization block with ica_final_status + feature_input_file
+notebooks_executed,BOTH,notebooks/*_v3.ipynb,PASS,"90 EEG cells / 53 speech cells, all code cells executed, 0 error outputs"

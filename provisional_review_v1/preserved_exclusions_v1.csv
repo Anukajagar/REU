@@ -1,0 +1,6 @@
+﻿recording_id,audit_disposition,components_removed,alpha_loss_pct,variance_reduction_pct,alpha_guard,variance_guard,eog_guard,frontal_guard,unchanged_by_this_pass
+P01_meditation,EXCLUDED,"[0, 2, 6]",77.88,43.29,FAIL,PASS,PASS,PASS,YES
+P04_meditation,EXCLUDED,"[0, 1, 7]",87.58,35.4,FAIL,PASS,PASS,PASS,YES
+P07_meditation,EXCLUDED,"[0, 1]",63.7,99.8,FAIL,FAIL,PASS,PASS,YES
+P09_calm,EXCLUDED,[3],40.17,10.15,FAIL,PASS,PASS,PASS,YES
+P09_meditation,EXCLUDED,"[8, 14]",86.63,4.56,FAIL,PASS,PASS,PASS,YES

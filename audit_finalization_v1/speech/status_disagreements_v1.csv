@@ -1,0 +1,11 @@
+participant_id,audit_readiness,readiness,agrees_with_v3,open_items
+P01,PASS,PASS,True,none
+P02,PASS,PASS,True,none
+P03,PASS,PASS,True,none
+P04,PASS,PASS,True,none
+P05,REVIEW_REQUIRED,REVIEW_REQUIRED,True,"low estimated SNR (13.8 dB) - recording property, not a processing defect"
+P06,PASS,PASS,True,none
+P07,PASS,PASS,True,none
+P08,PASS,PASS,True,none
+P09,REVIEW_REQUIRED,REVIEW_REQUIRED,True,stereo level difference +10.1 dB (both channels kept via lag-aligned mean)
+P10,REVIEW_REQUIRED,REVIEW_REQUIRED,True,source clipping (0.00302 % of samples); none in cleaned file; stereo level difference +11.7 dB (both channels kept via lag-aligned mean)

@@ -1,0 +1,9 @@
+id,check,status,detail
+V1,builder scripts compile,PASS,8 scripts compile
+V2,review table schema/vocabulary/all-pending,PASS,"30 rows, all NEEDS_REVIEW, reviewer/date empty, evidence fields populated"
+V3,review table vs packet vs audit agreement,PASS,"30 ids match packet; excluded-5 identical across packet and audit: ['P01_meditation', 'P04_meditation', 'P07_meditation', 'P09_calm', 'P09_meditation']"
+V4,"QC summary rows, feature inputs, recounts",PASS,50 rows; 50/50 feature inputs exist; recount 931; 30 pending + 10 not-applicable
+V5,before/after evidence completeness + cross-checks,PASS,30 figures; variance 30/30 OK; alpha 29/30 within 5 pp; 1 documented outlier (P07_meditation)
+V6,"notebook integrity (v3 frozen, v4 exact superset)",PASS,v3 hash unchanged; v4 = banner + 90 identical cells + V10 (output embedded)
+V7,review-notebook guard tests (temp copy),PASS,6 guard scenarios pass; real table hash unchanged during tests
+V8,hash-snapshot diff (no protected file changed),PASS,"0 pre-existing files changed; 2 new files, all inside signoff_finalization_v2/ or the 2 new notebooks"

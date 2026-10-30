@@ -1,0 +1,41 @@
+{
+  "version": "v3",
+  "frozen_on": "2026-10-11",
+  "rows": 50,
+  "by_modality": {
+    "eeg": {
+      "status": "READY_WITH_DOCUMENTED_LIMITATIONS",
+      "PASS": 6,
+      "REVIEW_REQUIRED": 34,
+      "FAILED": 0,
+      "report": "E:\\REU_DATA\\EEG processed\\eeg\\eeg_final_quality_control_v3.csv"
+    },
+    "speech": {
+      "status": "READY_WITH_DOCUMENTED_LIMITATIONS",
+      "PASS": 7,
+      "REVIEW_REQUIRED": 3,
+      "FAILED": 0,
+      "report": "E:\\REU_DATA\\SPEECH processed\\speech\\reports\\speech_final_quality_review_v3.csv"
+    }
+  },
+  "ica_final_review_status_counts": {
+    "APPROVED": 25,
+    "NOT_APPLIED": 10,
+    "REJECTED": 4,
+    "PROVISIONAL": 1
+  },
+  "eeg_segment_register": {
+    "spans": 235,
+    "recordings": 33,
+    "duration_s": 467.0,
+    "policy": "register only; nothing removed; original timing and events preserved"
+  },
+  "raw_audio_conversion": "not required (each participant folder already contains a .wav alongside the .aac/.mp4)",
+  "reports": {
+    "consolidated_csv": "E:\\REU_DATA\\reports_final_v3\\consolidated_preprocessing_summary_v3.csv",
+    "eeg_qc": "E:\\REU_DATA\\EEG processed\\eeg\\eeg_final_quality_control_v3.csv",
+    "speech_review": "E:\\REU_DATA\\SPEECH processed\\speech\\reports\\speech_final_quality_review_v3.csv",
+    "ica_review_log": "E:\\REU_DATA\\EEG processed\\eeg\\figures_v3\\ica_review_log.csv",
+    "segment_register": "E:\\REU_DATA\\EEG processed\\eeg\\figures_v3\\v8_segment_exclusion_register.csv"
+  }
+}

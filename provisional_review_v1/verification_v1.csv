@@ -1,0 +1,26 @@
+﻿recording_id,sources_checked,components_removed_agree,components_removed,missing_sources,evidence_npz_present,timeseries_png_present,spectra_png_present,component_map_png_present,packet_page_present,ica_report_json_present,n_components_in_metrics
+P01_calm,6,PASS,"[0, 1]",none,True,True,True,True,True,True,20
+P01_maths,6,PASS,[0],none,True,True,True,True,True,True,20
+P02_calm,6,PASS,[0],none,True,True,True,True,True,True,20
+P02_maths,6,PASS,[0],none,True,True,True,True,True,True,20
+P02_meditation,6,PASS,[5],none,True,True,True,True,True,True,20
+P03_calm,6,PASS,[0],none,True,True,True,True,True,True,20
+P03_maths,6,PASS,[4],none,True,True,True,True,True,True,20
+P03_meditation,6,PASS,[2],none,True,True,True,True,True,True,20
+P04_calm,6,PASS,[2],none,True,True,True,True,True,True,20
+P04_maths,6,PASS,[1],none,True,True,True,True,True,True,20
+P05_calm,6,PASS,[0],none,True,True,True,True,True,True,20
+P05_maths,6,PASS,[0],none,True,True,True,True,True,True,20
+P05_meditation,6,PASS,[0],none,True,True,True,True,True,True,20
+P06_calm,6,PASS,[0],none,True,True,True,True,True,True,20
+P06_maths,6,PASS,[0],none,True,True,True,True,True,True,20
+P06_meditation,6,PASS,[1],none,True,True,True,True,True,True,20
+P07_calm,6,PASS,[0],none,True,True,True,True,True,True,20
+P07_maths,6,PASS,[0],none,True,True,True,True,True,True,20
+P08_calm,6,PASS,"[0, 1]",none,True,True,True,True,True,True,20
+P08_maths,6,PASS,"[2, 3, 4]",none,True,True,True,True,True,True,20
+P08_meditation,6,PASS,"[2, 5]",none,True,True,True,True,True,True,20
+P09_maths,6,PASS,[0],none,True,True,True,True,True,True,20
+P10_calm,6,PASS,"[0, 1, 2]",none,True,True,True,True,True,True,20
+P10_maths,6,PASS,"[0, 1, 2]",none,True,True,True,True,True,True,20
+P10_meditation,6,PASS,"[0, 1]",none,True,True,True,True,True,True,20

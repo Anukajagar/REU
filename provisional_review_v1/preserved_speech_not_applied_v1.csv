@@ -1,0 +1,11 @@
+﻿recording_id,audit_disposition,audit_reason,feature_input_recommendation,unchanged_by_this_pass
+P01_speech,NOT_APPLIED,no ICA output (speech condition - too short for reliable ICA),E:\REU_DATA\EEG processed\eeg\P01\speech\P01_speech_eeg.fif,YES
+P02_speech,NOT_APPLIED,no ICA output (speech condition - too short for reliable ICA),E:\REU_DATA\EEG processed\eeg\P02\speech\P02_speech_eeg.fif,YES
+P03_speech,NOT_APPLIED,no ICA output (speech condition - too short for reliable ICA),E:\REU_DATA\EEG processed\eeg\P03\speech\P03_speech_eeg.fif,YES
+P04_speech,NOT_APPLIED,no ICA output (speech condition - too short for reliable ICA),E:\REU_DATA\EEG processed\eeg\P04\speech\P04_speech_eeg.fif,YES
+P05_speech,NOT_APPLIED,no ICA output (speech condition - too short for reliable ICA),E:\REU_DATA\EEG processed\eeg\P05\speech\P05_speech_eeg.fif,YES
+P06_speech,NOT_APPLIED,no ICA output (speech condition - too short for reliable ICA),E:\REU_DATA\EEG processed\eeg\P06\speech\P06_speech_eeg.fif,YES
+P07_speech,NOT_APPLIED,no ICA output (speech condition - too short for reliable ICA),E:\REU_DATA\EEG processed\eeg\P07\speech\P07_speech_eeg.fif,YES
+P08_speech,NOT_APPLIED,no ICA output (speech condition - too short for reliable ICA),E:\REU_DATA\EEG processed\eeg\P08\speech\P08_speech_eeg.fif,YES
+P09_speech,NOT_APPLIED,no ICA output (speech condition - too short for reliable ICA),E:\REU_DATA\EEG processed\eeg\P09\speech\P09_speech_eeg.fif,YES
+P10_speech,NOT_APPLIED,no ICA output (speech condition - too short for reliable ICA),E:\REU_DATA\EEG processed\eeg\P10\speech\P10_speech_eeg.fif,YES

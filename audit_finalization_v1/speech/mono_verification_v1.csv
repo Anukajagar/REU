@@ -1,0 +1,11 @@
+participant_id,source_channels,conversion,lag_used,pearson_r_vs_cleaned,rms_diff_dB,conversion_verified,level_diff_R_minus_L_dB
+P01,1,already mono; only resampled,0,1.0,0.0,True,
+P02,1,already mono; only resampled,0,1.0,0.0,True,
+P03,1,already mono; only resampled,0,1.0,0.0,True,
+P04,1,already mono; only resampled,0,1.0,0.0,True,
+P05,1,already mono; only resampled,0,1.0,0.0,True,
+P06,1,already mono; only resampled,0,1.0,0.0,True,
+P07,2,lag-aligned mean of both channels,9,1.0,0.0,True,5.25
+P08,2,lag-aligned mean of both channels,2,1.0,0.0,True,1.25
+P09,2,lag-aligned mean of both channels,23,1.0,0.0,True,10.13
+P10,2,lag-aligned mean of both channels,22,1.0,0.0,True,11.7

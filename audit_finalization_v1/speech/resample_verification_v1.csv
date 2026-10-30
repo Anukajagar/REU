@@ -1,0 +1,11 @@
+participant_id,source_sr_hz,cleaned_sr_hz,rate_change_is_real,source_energy_above_8kHz_pct,frame_count_matches_resample_poly,cleaned_top_band_7.5_8k_pct,anti_alias_evidence
+P01,44100,16000,True,0.1774,True,0.0004,cleaned spectrum is band-limited below 8 kHz; source above-8 kHz content 0.177%
+P02,44100,16000,True,0.0142,True,0.0019,cleaned spectrum is band-limited below 8 kHz; source above-8 kHz content 0.014%
+P03,44100,16000,True,0.0578,True,0.0054,cleaned spectrum is band-limited below 8 kHz; source above-8 kHz content 0.058%
+P04,44100,16000,True,0.172,True,0.0134,cleaned spectrum is band-limited below 8 kHz; source above-8 kHz content 0.172%
+P05,44100,16000,True,0.018,True,0.0002,cleaned spectrum is band-limited below 8 kHz; source above-8 kHz content 0.018%
+P06,48000,16000,True,0.0286,True,0.0019,cleaned spectrum is band-limited below 8 kHz; source above-8 kHz content 0.029%
+P07,48000,16000,True,0.0532,True,0.0152,cleaned spectrum is band-limited below 8 kHz; source above-8 kHz content 0.053%
+P08,48000,16000,True,0.0721,True,0.0022,cleaned spectrum is band-limited below 8 kHz; source above-8 kHz content 0.072%
+P09,48000,16000,True,0.0624,True,0.0055,cleaned spectrum is band-limited below 8 kHz; source above-8 kHz content 0.062%
+P10,48000,16000,True,0.4693,True,0.0439,cleaned spectrum is band-limited below 8 kHz; source above-8 kHz content 0.469%

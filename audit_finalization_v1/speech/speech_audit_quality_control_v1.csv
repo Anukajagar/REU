@@ -1,0 +1,11 @@
+participant_id,condition,feature_input_file,sample_rate_hz,channels,duration_s,output_integrity,estimated_snr_db,source_clipping_pct,cln_clipping_pct,level_diff_R_minus_L_dB,mono_conversion_verified,resample_verified,rate_suitable_for_features,open_items,audit_readiness
+P01,speech,E:\REU_DATA\SPEECH processed\speech\P01\P01_speech_cleaned.wav,16000,1,50.178,PASS,20.79,0.0,0.0,,True,True,True,none,PASS
+P02,speech,E:\REU_DATA\SPEECH processed\speech\P02\P02_speech_cleaned.wav,16000,1,42.24,PASS,17.85,0.0,0.0,,True,True,True,none,PASS
+P03,speech,E:\REU_DATA\SPEECH processed\speech\P03\P03_speech_cleaned.wav,16000,1,41.643,PASS,17.78,0.0,0.0,,True,True,True,none,PASS
+P04,speech,E:\REU_DATA\SPEECH processed\speech\P04\P04_speech_cleaned.wav,16000,1,51.328,PASS,18.78,0.0,0.0,,True,True,True,none,PASS
+P05,speech,E:\REU_DATA\SPEECH processed\speech\P05\P05_speech_cleaned.wav,16000,1,40.728,PASS,13.82,0.0,0.0,,True,True,True,"low estimated SNR (13.8 dB) - recording property, not a processing defect",REVIEW_REQUIRED
+P06,speech,E:\REU_DATA\SPEECH processed\speech\P06\P06_speech_cleaned.wav,16000,1,78.635,PASS,23.39,0.0,0.0,,True,True,True,none,PASS
+P07,speech,E:\REU_DATA\SPEECH processed\speech\P07\P07_speech_cleaned.wav,16000,1,40.96,PASS,19.47,0.0,0.0,5.25,True,True,True,none,PASS
+P08,speech,E:\REU_DATA\SPEECH processed\speech\P08\P08_speech_cleaned.wav,16000,1,58.475,PASS,18.96,0.0,0.0,1.25,True,True,True,none,PASS
+P09,speech,E:\REU_DATA\SPEECH processed\speech\P09\P09_speech_cleaned.wav,16000,1,40.896,PASS,19.6,0.0,0.0,10.13,True,True,True,stereo level difference +10.1 dB (both channels kept via lag-aligned mean),REVIEW_REQUIRED
+P10,speech,E:\REU_DATA\SPEECH processed\speech\P10\P10_speech_cleaned.wav,16000,1,44.48,PASS,24.21,0.00302,0.0,11.7,True,True,True,source clipping (0.00302 % of samples); none in cleaned file; stereo level difference +11.7 dB (both channels kept via lag-aligned mean),REVIEW_REQUIRED

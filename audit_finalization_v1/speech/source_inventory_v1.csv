@@ -1,0 +1,11 @@
+participant_id,n_wav,n_companion,companion_ext,source_wav,source_sr_hz,source_channels,source_subtype,source_duration_s,source_frames
+P01,1,1,.mp4,E:\REU_DATA\P01\01_speech\01_speech_wav.wav,44100,1,PCM_16,50.178,2212864
+P02,1,1,.aac,E:\REU_DATA\P02\02_speech\02_speech_wav.wav,44100,1,PCM_16,42.24,1862784
+P03,1,1,.aac,E:\REU_DATA\P03\03_speech\03_speech_wav.wav,44100,1,PCM_16,41.643,1836441
+P04,1,1,.aac,E:\REU_DATA\P04\04_speech\04_speech_wav.wav,44100,1,PCM_16,51.328,2263564
+P05,1,1,.mp4,E:\REU_DATA\P05\05_speech\05_speech_wav.wav,44100,1,PCM_16,40.728,1796096
+P06,1,1,.aac,E:\REU_DATA\P06\06_speech\06_speech_wav.wav,48000,1,PCM_16,78.635,3774464
+P07,1,1,.aac,E:\REU_DATA\P07\07_speech\07_speech_wav.wav,48000,2,PCM_16,40.96,1966080
+P08,1,1,.aac,E:\REU_DATA\P08\08_speech\08_speech_wav.wav,48000,2,PCM_16,58.475,2806784
+P09,1,1,.aac,E:\REU_DATA\P09\09_speech\09_speech_wav.wav,48000,2,PCM_16,40.896,1963008
+P10,1,1,.aac,E:\REU_DATA\P10\10_speech\10_speech_wav.wav,48000,2,PCM_16,44.48,2135040

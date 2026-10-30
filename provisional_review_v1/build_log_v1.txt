@@ -1,0 +1,21 @@
+=== provisional_review_v1 build ===
+built_utc=2026-10-13T07:57:15Z
+source sha256 ica_audit_v1.csv bc7941723eb1ce2018782156bcc6b1222c867a7c11c22f9b919e5f6ad24b9dc9
+source sha256 packet_manifest_v2.csv 9992dbe716426d1ef6b0dcf4bf5ae9085d672bd70b195000c4d5444991bdb60e
+source sha256 component_evidence_index_v1.csv 4cdeb41288885ee5f0eda7a0b4f5e921cdd35678bfd307d82f9d1e192a5d2153
+source sha256 component_metrics_v1.csv 4e151e769d8cee015234fa34aea1de1c732e5ae153d7c687bf3d795bf1c5eb5f
+pending rows=25 excluded rows=5
+HOLD=7 APPROVE=18
+wrote provisional_decision_report_v1.csv (25 rows)
+wrote verification_v1.csv (25 rows)
+wrote hold_component_metrics_v1.csv (16 rows)
+wrote hold_case_metrics_v1.csv (7 rows)
+wrote preserved_exclusions_v1.csv (5 rows)
+wrote preserved_speech_not_applied_v1.csv (10 rows)
+component-index agreement: 25/25 PASS
+rows with any source problem: none
+HOLD count in report: 7
+APPROVED count in report: 18
+near-guard rows: P02_calm=28.6, P06_maths=29.43, P09_maths=25.24
+excluded rows preserved: 5
+speech NOT_APPLIED rows preserved: 10
