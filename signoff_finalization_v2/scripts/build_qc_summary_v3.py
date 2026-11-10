@@ -1,4 +1,8 @@
-r"""Build eeg_qc_summary_v3.csv/.md reflecting the completed human ICA sign-off (2026-10-14).
+r"""Build eeg_qc_summary_v3.csv/.md reflecting the completed human ICA sign-off.
+
+Sign-off history: 28 of 30 decided on 2026-10-14; the final 2 (P07_maths,
+P08_meditation) were decided 2026-11-01, completing all 30. Each row now carries
+its own review_date, so no single session date is assumed.
 
 Reads (read-only): eeg_qc_summary_v2.csv, ica_review_table_v1.csv,
                     ica_review_context_v1.csv, ica_signoff_decisions_log_v1.csv.
@@ -23,7 +27,8 @@ OUT_CSV = SIGNOFF / "eeg_qc_summary_v3.csv"
 OUT_MD = SIGNOFF / "eeg_qc_summary_v3.md"
 
 REVIEWER = "Anushri Kajagar"
-DATE = "2026-10-14"
+SESSION_1 = "2026-10-14"   # 28 of 30 decided
+SESSION_2 = "2026-11-01"   # final 2 (P07_maths, P08_meditation)
 
 
 def main() -> None:
@@ -40,9 +45,10 @@ def main() -> None:
     assert len(review) == 30
     assert set(review["decision"]) <= {"APPROVED", "REJECTED", "NEEDS_REVIEW"}
     assert (review["reviewer"].str.strip() != "").all(), "every row must carry a reviewer"
-    assert review.loc[review["decision"] != "NEEDS_REVIEW", "review_date"].str.strip().ne("").all()
+    assert review["review_date"].str.strip().ne("").all(), "every decided row must carry a date"
 
     decision = dict(zip(review["recording_id"], review["decision"]))
+    decided_on = dict(zip(review["recording_id"], review["review_date"]))
     qc["rid"] = qc["participant_id"] + "_" + qc["condition"]
     assert qc.loc[qc.modality == "eeg", "rid"].isin(decision).sum() == 30
 
@@ -57,32 +63,33 @@ def main() -> None:
         if rid not in decision or row["modality"] != "eeg":
             continue
         d = decision[rid]
+        d_date = decided_on[rid]
         qc.at[i, "ica_formal_signoff_decision"] = d
         if d == "APPROVED":
             n_app += 1
             p = Path(ica_path[rid])
             assert p.exists(), f"approved but ICA fif missing: {p}"
             qc.at[i, "feature_input_file"] = str(p)
-            base = f"HUMAN ICA SIGN-OFF APPROVED {DATE} ({REVIEWER}); ICA output is the feature input"
+            base = f"HUMAN ICA SIGN-OFF APPROVED {d_date} ({REVIEWER}); ICA output is the feature input"
             if int(row["artifact_windows_audit_recount"] or 0) > 0:
                 base += f"; honour artifact-window register ({row['artifact_windows_audit_recount']} windows)"
             qc.at[i, "key_open_items"] = base
         elif d == "REJECTED":
             n_rej += 1
             excluded = row["ica_audit_disposition"] == "EXCLUDED"
-            base = (f"HUMAN ICA SIGN-OFF REJECTED {DATE} ({REVIEWER}); ICA output not used; "
+            base = (f"HUMAN ICA SIGN-OFF REJECTED {d_date} ({REVIEWER}); ICA output not used; "
                     "cleaned pre-ICA fif is the feature input")
             if excluded:
-                base = (f"ICA exclusion CONFIRMED by human sign-off {DATE} ({REVIEWER}); "
+                base = (f"ICA exclusion CONFIRMED by human sign-off {d_date} ({REVIEWER}); "
                         "cleaned pre-ICA fif is the feature input")
             qc.at[i, "key_open_items"] = base
         else:
             n_pend += 1
             qc.at[i, "key_open_items"] = (
-                f"human ICA sign-off kept NEEDS_REVIEW {DATE} ({REVIEWER}); "
+                f"human ICA sign-off kept NEEDS_REVIEW {d_date} ({REVIEWER}); "
                 "cleaned pre-ICA fif remains the feature input (see review-table comments)")
 
-    assert (n_app, n_rej, n_pend) == (15, 13, 2), f"unexpected counts {(n_app, n_rej, n_pend)}"
+    assert (n_app, n_rej, n_pend) == (16, 14, 0), f"unexpected counts {(n_app, n_rej, n_pend)}"
 
     for _, r in qc[qc.modality == "eeg"].iterrows():
         assert Path(r.feature_input_file).exists(), f"missing feature input: {r.feature_input_file}"
@@ -99,7 +106,8 @@ def main() -> None:
 **Supersedes:** `eeg_qc_summary_v2.csv` (pre-sign-off state; kept for history).
 **Machine-readable:** `eeg_qc_summary_v3.csv` (50 rows: 40 EEG + 10 speech).
 
-**Sign-off session:** {DATE}, reviewer {REVIEWER}. Every count below is recomputed
+**Sign-off sessions:** {SESSION_1} (28 of 30 decided) and {SESSION_2} (final 2:
+`P07_maths`, `P08_meditation`), reviewer {REVIEWER}. Every count below is recomputed
 from the review table at build time. Nothing was forced to PASS.
 
 ## Human ICA sign-off (the v3 headline change)
@@ -108,9 +116,9 @@ from the review table at build time. Nothing was forced to PASS.
 |---|---|---|
 | APPROVED | {n_app} | `*_eeg_ica.fif` (artifact-window registers still honoured) |
 | REJECTED | {n_rej} | cleaned pre-ICA `*_eeg.fif` |
-| NEEDS_REVIEW | {n_pend} | cleaned pre-ICA `*_eeg.fif` (P07_maths, P08_meditation remain open) |
+| NEEDS_REVIEW | {n_pend} | none — no row is open |
 
-Formal sign-off: **{n_app + n_rej} of 30 decided**, {n_pend} explicitly kept open.
+Formal sign-off: **{n_app + n_rej} of 30 decided**, {n_pend} kept open — sign-off is complete.
 All 5 pre-existing ICA exclusions were confirmed REJECTED (QC-03 closed).
 Decision log: `ica_signoff_decisions_log_v1.csv` ({log_entries} append-only entries).
 
@@ -130,22 +138,30 @@ Decision log: `ica_signoff_decisions_log_v1.csv` ({log_entries} append-only entr
 
 ## Policy notes
 
-1. **Feature input is no longer uniform.** The 15 APPROVED recordings use their
-   `*_eeg_ica.fif`; the other 25 EEG recordings use the cleaned `*_eeg.fif`.
+1. **Feature input is no longer uniform.** The {n_app} APPROVED recordings use their
+   `*_eeg_ica.fif`; the other {40 - n_app} EEG recordings use the cleaned `*_eeg.fif`.
    Artifact-window registers remain skip-in-features for every recording.
 2. **The 5 excluded ICA outputs stay excluded** (exclusions confirmed REJECTED;
    files preserved on disk for audit).
 3. **Audit readiness (2 PASS / 38 REVIEW) is unchanged** — that is the stricter
    audit-scope label and was not reopened by sign-off.
-4. Two rows (`P07_maths`, `P08_meditation`) are deliberately still NEEDS_REVIEW;
-   their comments record the exact unresolved concerns.
+4. **All 30 rows are decided**; no `NEEDS_REVIEW` row remains. The two that were
+   held open on {SESSION_1} were closed on {SESSION_2}:
+   `P07_maths` APPROVED (IC0 confirmed as blink: EOG 0.978, alpha gained 2.52%,
+   the 72.52% variance cut is blink energy) and `P08_meditation` REJECTED (IC5
+   identity unconfirmed, 10.3% HF removed — highest in the dataset).
 
 ## Unresolved items
 
-`P07_maths` (72.5% variance cut needs component-level confirmation) and
-`P08_meditation` (IC 2 vs IC 5 identity, 10.3% HF) remain open in the review
-table. See `qc_issue_classification_v2.csv` for the wider issue set (QC-02 now
-28/30 decided; QC-03 confirmed).
+None in the review table — sign-off is 30/30. Feature extraction may start under the
+rules already fixed: use the `feature_input_file` column of `eeg_qc_summary_v3.csv`,
+skip every window in the artifact register (`SKIP_IN_FEATURE_EXTRACTION`), never use
+the 5 excluded ICA files, and compute no reference-sensitive feature until QC-01
+(acquisition reference UNKNOWN) is answered by the acquisition team.
+
+`qc_issue_classification_v2.csv` remains the pre-sign-off snapshot of the wider issue
+set (built when all 30 rows were still `NEEDS_REVIEW`); QC-02 and QC-03 are closed by
+this table, QC-01/QC-04/QC-12 still stand.
 """
     OUT_MD.write_text(md, encoding="utf-8")
     print(f"WROTE {OUT_CSV.name} (50 rows) and {OUT_MD.name}")

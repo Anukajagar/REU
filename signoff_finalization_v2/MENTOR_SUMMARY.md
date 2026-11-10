@@ -1,5 +1,10 @@
 # Mentor summary — EEG preprocessing status (2026-10-13)
 
+> **Updated 2026-11-01:** the human ICA sign-off gate described in this note is
+> now **complete — 30 of 30 rows decided**. The "Honest QC state" and "What
+> remains before feature extraction" sections below reflect that final state;
+> everything else still describes the 2026-10-13 pass.
+
 **Project:** Analysis of Neuro-Acoustic Features from EEG and Speech Signals for
 Dosha Characterization. **Scope of this note:** EEG preprocessing quality control
 and the human ICA review gate. Feature extraction has deliberately not started.
@@ -38,22 +43,28 @@ and the human ICA review gate. Feature extraction has deliberately not started.
 
 - EEG: **2 PASS / 38 REVIEW_REQUIRED** (audit criteria) — REVIEW_REQUIRED means
   "usable with documented constraints", not defective.
-- **No ICA output is formally approved yet.** A complete human review workflow is
-  ready: `notebooks\EEG_ICA_Signoff_Review_v1.ipynb` +
-  `signoff_finalization_v2\ica_review_table_v1.csv` (30 rows, all pending;
-  18 prior provisional recommendations carried as non-binding context).
+- **ICA sign-off is complete: 30 of 30 rows decided** (16 APPROVED / 14 REJECTED,
+  0 open). Recorded in `ica_review_table_v1.csv` — 28 on 2026-10-14, the final 2
+  (`P07_maths` APPROVED, `P08_meditation` REJECTED) on 2026-11-01. Feature input
+  follows the `feature_input_file` column of `eeg_qc_summary_v3.csv`:
+  **16 recordings use `*_eeg_ica.fif`, 24 use the cleaned pre-ICA `*_eeg.fif`**.
+  All 5 original ICA exclusions stayed REJECTED.
 - Acquisition reference is **unknown** — reference-sensitive features must wait
   for the acquisition team. Electrode positions are assumed 10–20; the EOG
   detector uses an Fp-channel proxy (no dedicated EOG was recorded).
 
 ## What remains before feature extraction
 
-1. **A human signs the 30-row review table** (the only step that can change how
-   many recordings use ICA-cleaned vs cleaned files).
-2. Feature extraction then follows machine-readable rules: input file per
-   recording from `eeg_qc_summary_v2.csv`; skip the 931 registered windows;
-   never use the 5 excluded ICA files unless reinstated with evidence; no
-   reference-sensitive features until QC-01 closes.
+1. ~~A human signs the 30-row review table~~ — **done** (2026-11-01).
+2. Feature extraction follows machine-readable rules: input file per
+   recording from `eeg_qc_summary_v3.csv` (`feature_input_file`); skip the
+   931 registered windows (`SKIP_IN_FEATURE_EXTRACTION`); never use the 5
+   excluded ICA files unless reinstated with evidence; no reference-sensitive
+   features until QC-01 closes. Two decisions are still open for the analysis
+   lead, neither blocking: whether to interpolate the 110 flagged channel
+   instances (QC-04), and whether reference-sensitive features are needed at
+   all (QC-01).
 
-*Detailed files: `MENTOR_SUMMARY` companions `README.md`, `eeg_qc_summary_v2.md`,
-`qc_issue_classification_v2.md`, `VALIDATION_REPORT.md`, `CHANGE_LOG.md`.*
+*Detailed files: `MENTOR_SUMMARY` companions `README.md`, `eeg_qc_summary_v3.md`,
+`qc_issue_classification_v2.md` (pre-sign-off snapshot), `VALIDATION_REPORT.md`,
+`CHANGE_LOG.md`.*

@@ -4,20 +4,21 @@
 **Supersedes:** `eeg_qc_summary_v2.csv` (pre-sign-off state; kept for history).
 **Machine-readable:** `eeg_qc_summary_v3.csv` (50 rows: 40 EEG + 10 speech).
 
-**Sign-off session:** 2026-10-14, reviewer Anushri Kajagar. Every count below is recomputed
+**Sign-off sessions:** 2026-10-14 (28 of 30 decided) and 2026-11-01 (final 2:
+`P07_maths`, `P08_meditation`), reviewer Anushri Kajagar. Every count below is recomputed
 from the review table at build time. Nothing was forced to PASS.
 
 ## Human ICA sign-off (the v3 headline change)
 
 | Decision | Count | Feature input now in force |
 |---|---|---|
-| APPROVED | 15 | `*_eeg_ica.fif` (artifact-window registers still honoured) |
-| REJECTED | 13 | cleaned pre-ICA `*_eeg.fif` |
-| NEEDS_REVIEW | 2 | cleaned pre-ICA `*_eeg.fif` (P07_maths, P08_meditation remain open) |
+| APPROVED | 16 | `*_eeg_ica.fif` (artifact-window registers still honoured) |
+| REJECTED | 14 | cleaned pre-ICA `*_eeg.fif` |
+| NEEDS_REVIEW | 0 | none — no row is open |
 
-Formal sign-off: **28 of 30 decided**, 2 explicitly kept open.
+Formal sign-off: **30 of 30 decided**, 0 kept open — sign-off is complete.
 All 5 pre-existing ICA exclusions were confirmed REJECTED (QC-03 closed).
-Decision log: `ica_signoff_decisions_log_v1.csv` (31 append-only entries).
+Decision log: `ica_signoff_decisions_log_v1.csv` (33 append-only entries).
 
 ## Headline counts (recomputed)
 
@@ -29,25 +30,33 @@ Decision log: `ica_signoff_decisions_log_v1.csv` (31 append-only entries).
 | ICA outputs | 30 `*_eeg_ica.fif` + 30 `ica_report.json` | filesystem |
 | EEG audit readiness | PASS 2 / REVIEW_REQUIRED 38 / FAILED 0 | `master_recording_qc_v1.csv` (unchanged) |
 | ICA audit dispositions | EXCLUDED 5, HUMAN_SIGNOFF_PENDING 25, NOT_APPLIED 10 | `ica_audit_v1.csv` (unchanged) |
-| Formal human ICA sign-off | APPROVED 15 / REJECTED 13 / NEEDS_REVIEW 2 | `ica_review_table_v1.csv` |
-| Feature inputs now | ICA fif 15 / cleaned fif 25 (EEG) | this build verified all paths exist |
+| Formal human ICA sign-off | APPROVED 16 / REJECTED 14 / NEEDS_REVIEW 0 | `ica_review_table_v1.csv` |
+| Feature inputs now | ICA fif 16 / cleaned fif 24 (EEG) | this build verified all paths exist |
 | Speech readiness | PASS 7 / REVIEW_REQUIRED 3 | `speech_audit_quality_control_v1.csv` |
 
 ## Policy notes
 
-1. **Feature input is no longer uniform.** The 15 APPROVED recordings use their
-   `*_eeg_ica.fif`; the other 25 EEG recordings use the cleaned `*_eeg.fif`.
+1. **Feature input is no longer uniform.** The 16 APPROVED recordings use their
+   `*_eeg_ica.fif`; the other 24 EEG recordings use the cleaned `*_eeg.fif`.
    Artifact-window registers remain skip-in-features for every recording.
 2. **The 5 excluded ICA outputs stay excluded** (exclusions confirmed REJECTED;
    files preserved on disk for audit).
 3. **Audit readiness (2 PASS / 38 REVIEW) is unchanged** — that is the stricter
    audit-scope label and was not reopened by sign-off.
-4. Two rows (`P07_maths`, `P08_meditation`) are deliberately still NEEDS_REVIEW;
-   their comments record the exact unresolved concerns.
+4. **All 30 rows are decided**; no `NEEDS_REVIEW` row remains. The two that were
+   held open on 2026-10-14 were closed on 2026-11-01:
+   `P07_maths` APPROVED (IC0 confirmed as blink: EOG 0.978, alpha gained 2.52%,
+   the 72.52% variance cut is blink energy) and `P08_meditation` REJECTED (IC5
+   identity unconfirmed, 10.3% HF removed — highest in the dataset).
 
 ## Unresolved items
 
-`P07_maths` (72.5% variance cut needs component-level confirmation) and
-`P08_meditation` (IC 2 vs IC 5 identity, 10.3% HF) remain open in the review
-table. See `qc_issue_classification_v2.csv` for the wider issue set (QC-02 now
-28/30 decided; QC-03 confirmed).
+None in the review table — sign-off is 30/30. Feature extraction may start under the
+rules already fixed: use the `feature_input_file` column of `eeg_qc_summary_v3.csv`,
+skip every window in the artifact register (`SKIP_IN_FEATURE_EXTRACTION`), never use
+the 5 excluded ICA files, and compute no reference-sensitive feature until QC-01
+(acquisition reference UNKNOWN) is answered by the acquisition team.
+
+`qc_issue_classification_v2.csv` remains the pre-sign-off snapshot of the wider issue
+set (built when all 30 rows were still `NEEDS_REVIEW`); QC-02 and QC-03 are closed by
+this table, QC-01/QC-04/QC-12 still stand.

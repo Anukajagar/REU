@@ -40,39 +40,39 @@ the v3 pass's automated ICA approvals: acceptance of an ICA-cleaned file require
 looking at the component evidence. V10 makes the state of that gate explicit inside the main
 notebook instead of leaving it buried in side folders.
 
-**Sign-off session (2026-10-14, reviewer: Anushri Kajagar).** All 30 rows were reviewed:
-**15 APPROVED, 13 REJECTED, 2 kept NEEDS_REVIEW** (`P07_maths`, `P08_meditation`). The 5
-pre-existing ICA exclusions were confirmed REJECTED. Decisions and full comments live in the
-review table and the append-only decision log (`ica_signoff_decisions_log_v1.csv`, 31 entries).
+**Sign-off sessions (reviewer: Anushri Kajagar).** All 30 rows are now reviewed:
+**16 APPROVED, 14 REJECTED, 0 open** — 28 decided on 2026-10-14, then `P07_maths`
+APPROVED and `P08_meditation` REJECTED on 2026-11-01. The 5 pre-existing ICA
+exclusions were confirmed REJECTED. Decisions and full comments live in the
+review table and the append-only decision log
+(`ica_signoff_decisions_log_v1.csv`, 33 entries).
 
-**Feature input is now per-recording.** The 15 APPROVED recordings use their `*_eeg_ica.fif`
-(artifact-window registers still honoured); the other 25 EEG recordings use the cleaned
+**Feature input is now per-recording.** The 16 APPROVED recordings use their `*_eeg_ica.fif`
+(artifact-window registers still honoured); the other 24 EEG recordings use the cleaned
 `*_eeg.fif`. See `signoff_finalization_v2\\eeg_qc_summary_v3.csv`.
 
 **Validation performed.** Schema assert on the 11 required columns; 30 unique rows; existence
 of every component-map and before/after evidence figure; decision-vocabulary check; every
 feature-input path in the QC summary verified on disk.
 
-**Limitations remaining.** 2 rows remain NEEDS_REVIEW by explicit reviewer choice; the
-acquisition reference remains UNKNOWN (see
-`audit_finalization_v1\\reports\\acquisition_reference_note_v1.md`); no feature extraction or
-Dosha classification has started.
+**Limitations remaining.** No sign-off row is open; the acquisition reference remains UNKNOWN
+(see `audit_finalization_v1\\reports\\acquisition_reference_note_v1.md`); no feature extraction
+or Dosha classification has started.
 """
 
 MD_93 = """### Final v4 summary — preprocessing + sign-off gate
 
 - **Preprocessing itself is final.** 40 cleaned `*_eeg.fif`, 30 `*_eeg_ica.fif`, per-recording
   JSONs, registers, and QC tables are consistent and verified (v3 report + independent audit).
-- **The human ICA sign-off gate has been exercised (2026-10-14).** 28 of 30 rows carry final
-  decisions (15 APPROVED / 13 REJECTED); 2 rows (`P07_maths`, `P08_meditation`) remain
-  NEEDS_REVIEW by explicit reviewer choice. The review notebook
-  (`notebooks\\EEG_ICA_Signoff_Review_v1.ipynb`) can record those two whenever the
-  component-level questions are resolved.
-- **Feature inputs now depend on the sign-off:** ICA output for the 15 approved recordings,
-  cleaned pre-ICA file for the other 25. Honour the artifact-window register for every row.
+- **The human ICA sign-off gate is complete (30 of 30 decided).** 16 APPROVED / 14 REJECTED /
+  0 open — 28 rows on 2026-10-14, then `P07_maths` APPROVED and `P08_meditation` REJECTED on
+  2026-11-01. All 5 pre-existing ICA exclusions remain REJECTED. Decisions live in
+  `signoff_finalization_v2\\ica_review_table_v1.csv` with the append-only decision log.
+- **Feature inputs depend on the sign-off:** ICA output for the 16 approved recordings,
+  cleaned pre-ICA file for the other 24. Honour the artifact-window register for every row.
 - **Nothing downstream has started** — no feature extraction, no questionnaires, no Dosha
   classification. That work may begin with the documented constraints in force (artifact-window
-  register, excluded ICA files, unknown acquisition reference, 2 open sign-off rows).
+  register, 5 excluded ICA files, unknown acquisition reference).
 - **Change log / validation:** `signoff_finalization_v2\\CHANGE_LOG.md` and
   `signoff_finalization_v2\\VALIDATION_REPORT.md`.
 """
@@ -135,7 +135,9 @@ def main() -> None:
 
     review = pd.read_csv(SIGNOFF / "ica_review_table_v1.csv", keep_default_na=False)
     counts = review["decision"].value_counts().to_dict()
-    assert counts.get("APPROVED") == 15 and counts.get("REJECTED") == 13 and counts.get("NEEDS_REVIEW") == 2
+    assert counts.get("APPROVED") == 16 and counts.get("REJECTED") == 14, \
+        f"unexpected decision counts {counts}"
+    assert counts.get("NEEDS_REVIEW", 0) == 0, "sign-off is not complete"
 
     v4["cells"][91]["source"] = MD_91.splitlines(keepends=True)
     v4["cells"][92]["source"] = CODE_92.splitlines(keepends=True)
@@ -144,7 +146,8 @@ def main() -> None:
     with redirect_stdout(buf):
         exec(compile(CODE_92, "<V10-status-cell>", "exec"), {"__name__": "__main__"})
     output_text = buf.getvalue()
-    assert "15" in output_text and "APPROVED" in output_text, "unexpected cell output"
+    assert "APPROVED" in output_text, "unexpected cell output"
+    assert "ICA fif: 16" in output_text, "feature-input split not refreshed"
 
     v4["cells"][92]["execution_count"] = 35
     v4["cells"][92]["outputs"] = [{

@@ -1,0 +1,541 @@
+run_timestamp_utc,participant_id,input_file,params_json,status,error_message,elapsed_s
+2026-10-31T08:48:24Z,P01,E:\REU_DATA\SPEECH processed\speech\P01\P01_speech_cleaned.wav,"{
+  ""expected_sample_rate_hz"": 16000,
+  ""expected_channels"": 1,
+  ""frame_length_s"": 0.025,
+  ""hop_length_s"": 0.01,
+  ""spectral_n_fft"": 512,
+  ""f0_method"": ""librosa.pyin"",
+  ""f0_frame_length"": 1024,
+  ""f0_hop_length"": 160,
+  ""f0_min_hz"": 75.0,
+  ""f0_max_hz"": 500.0,
+  ""n_mfcc"": 13,
+  ""n_mels"": 40,
+  ""pitch_range_hz"": [
+    75.0,
+    500.0
+  ],
+  ""hnr_time_step_s"": 0.01,
+  ""hnr_silence_threshold"": 0.1,
+  ""hnr_voicing_threshold"": 1.0,
+  ""cpps_trend"": ""Exponential decay"",
+  ""cpps_fit_method"": ""Robust"",
+  ""jitter_shimmer_status"": ""EXCLUDED (prototype: unreliable on running speech)"",
+  ""vad_noise_percentile"": 10,
+  ""vad_speech_percentile"": 90,
+  ""vad_threshold_margin_db"": 6.0,
+  ""vad_min_silence_run_ms"": 100,
+  ""vad_min_speech_run_ms"": 50,
+  ""pause_min_duration_ms"": 250,
+  ""pause_validation_duration_ms"": 1000,
+  ""syllable_peak_distance_frames"": 8,
+  ""syllable_peak_prominence_db"": 3.0,
+  ""syllable_rate_sane_range"": [
+    1.5,
+    8.0
+  ],
+  ""plausible_f0_mean_hz"": [
+    70.0,
+    300.0
+  ],
+  ""plausible_hnr_db"": [
+    -10.0,
+    40.0
+  ],
+  ""plausible_cpps_db"": [
+    0.0,
+    30.0
+  ],
+  ""plausible_speech_ratio_pct"": [
+    30.0,
+    95.0
+  ],
+  ""silence_pct_crosscheck_tolerance"": 10.0
+}",OK,,11.93
+2026-10-31T08:48:24Z,P02,E:\REU_DATA\SPEECH processed\speech\P02\P02_speech_cleaned.wav,"{
+  ""expected_sample_rate_hz"": 16000,
+  ""expected_channels"": 1,
+  ""frame_length_s"": 0.025,
+  ""hop_length_s"": 0.01,
+  ""spectral_n_fft"": 512,
+  ""f0_method"": ""librosa.pyin"",
+  ""f0_frame_length"": 1024,
+  ""f0_hop_length"": 160,
+  ""f0_min_hz"": 75.0,
+  ""f0_max_hz"": 500.0,
+  ""n_mfcc"": 13,
+  ""n_mels"": 40,
+  ""pitch_range_hz"": [
+    75.0,
+    500.0
+  ],
+  ""hnr_time_step_s"": 0.01,
+  ""hnr_silence_threshold"": 0.1,
+  ""hnr_voicing_threshold"": 1.0,
+  ""cpps_trend"": ""Exponential decay"",
+  ""cpps_fit_method"": ""Robust"",
+  ""jitter_shimmer_status"": ""EXCLUDED (prototype: unreliable on running speech)"",
+  ""vad_noise_percentile"": 10,
+  ""vad_speech_percentile"": 90,
+  ""vad_threshold_margin_db"": 6.0,
+  ""vad_min_silence_run_ms"": 100,
+  ""vad_min_speech_run_ms"": 50,
+  ""pause_min_duration_ms"": 250,
+  ""pause_validation_duration_ms"": 1000,
+  ""syllable_peak_distance_frames"": 8,
+  ""syllable_peak_prominence_db"": 3.0,
+  ""syllable_rate_sane_range"": [
+    1.5,
+    8.0
+  ],
+  ""plausible_f0_mean_hz"": [
+    70.0,
+    300.0
+  ],
+  ""plausible_hnr_db"": [
+    -10.0,
+    40.0
+  ],
+  ""plausible_cpps_db"": [
+    0.0,
+    30.0
+  ],
+  ""plausible_speech_ratio_pct"": [
+    30.0,
+    95.0
+  ],
+  ""silence_pct_crosscheck_tolerance"": 10.0
+}",OK,,13.06
+2026-10-31T08:48:24Z,P03,E:\REU_DATA\SPEECH processed\speech\P03\P03_speech_cleaned.wav,"{
+  ""expected_sample_rate_hz"": 16000,
+  ""expected_channels"": 1,
+  ""frame_length_s"": 0.025,
+  ""hop_length_s"": 0.01,
+  ""spectral_n_fft"": 512,
+  ""f0_method"": ""librosa.pyin"",
+  ""f0_frame_length"": 1024,
+  ""f0_hop_length"": 160,
+  ""f0_min_hz"": 75.0,
+  ""f0_max_hz"": 500.0,
+  ""n_mfcc"": 13,
+  ""n_mels"": 40,
+  ""pitch_range_hz"": [
+    75.0,
+    500.0
+  ],
+  ""hnr_time_step_s"": 0.01,
+  ""hnr_silence_threshold"": 0.1,
+  ""hnr_voicing_threshold"": 1.0,
+  ""cpps_trend"": ""Exponential decay"",
+  ""cpps_fit_method"": ""Robust"",
+  ""jitter_shimmer_status"": ""EXCLUDED (prototype: unreliable on running speech)"",
+  ""vad_noise_percentile"": 10,
+  ""vad_speech_percentile"": 90,
+  ""vad_threshold_margin_db"": 6.0,
+  ""vad_min_silence_run_ms"": 100,
+  ""vad_min_speech_run_ms"": 50,
+  ""pause_min_duration_ms"": 250,
+  ""pause_validation_duration_ms"": 1000,
+  ""syllable_peak_distance_frames"": 8,
+  ""syllable_peak_prominence_db"": 3.0,
+  ""syllable_rate_sane_range"": [
+    1.5,
+    8.0
+  ],
+  ""plausible_f0_mean_hz"": [
+    70.0,
+    300.0
+  ],
+  ""plausible_hnr_db"": [
+    -10.0,
+    40.0
+  ],
+  ""plausible_cpps_db"": [
+    0.0,
+    30.0
+  ],
+  ""plausible_speech_ratio_pct"": [
+    30.0,
+    95.0
+  ],
+  ""silence_pct_crosscheck_tolerance"": 10.0
+}",OK,,9.59
+2026-10-31T08:48:24Z,P04,E:\REU_DATA\SPEECH processed\speech\P04\P04_speech_cleaned.wav,"{
+  ""expected_sample_rate_hz"": 16000,
+  ""expected_channels"": 1,
+  ""frame_length_s"": 0.025,
+  ""hop_length_s"": 0.01,
+  ""spectral_n_fft"": 512,
+  ""f0_method"": ""librosa.pyin"",
+  ""f0_frame_length"": 1024,
+  ""f0_hop_length"": 160,
+  ""f0_min_hz"": 75.0,
+  ""f0_max_hz"": 500.0,
+  ""n_mfcc"": 13,
+  ""n_mels"": 40,
+  ""pitch_range_hz"": [
+    75.0,
+    500.0
+  ],
+  ""hnr_time_step_s"": 0.01,
+  ""hnr_silence_threshold"": 0.1,
+  ""hnr_voicing_threshold"": 1.0,
+  ""cpps_trend"": ""Exponential decay"",
+  ""cpps_fit_method"": ""Robust"",
+  ""jitter_shimmer_status"": ""EXCLUDED (prototype: unreliable on running speech)"",
+  ""vad_noise_percentile"": 10,
+  ""vad_speech_percentile"": 90,
+  ""vad_threshold_margin_db"": 6.0,
+  ""vad_min_silence_run_ms"": 100,
+  ""vad_min_speech_run_ms"": 50,
+  ""pause_min_duration_ms"": 250,
+  ""pause_validation_duration_ms"": 1000,
+  ""syllable_peak_distance_frames"": 8,
+  ""syllable_peak_prominence_db"": 3.0,
+  ""syllable_rate_sane_range"": [
+    1.5,
+    8.0
+  ],
+  ""plausible_f0_mean_hz"": [
+    70.0,
+    300.0
+  ],
+  ""plausible_hnr_db"": [
+    -10.0,
+    40.0
+  ],
+  ""plausible_cpps_db"": [
+    0.0,
+    30.0
+  ],
+  ""plausible_speech_ratio_pct"": [
+    30.0,
+    95.0
+  ],
+  ""silence_pct_crosscheck_tolerance"": 10.0
+}",OK,,12.16
+2026-10-31T08:48:24Z,P05,E:\REU_DATA\SPEECH processed\speech\P05\P05_speech_cleaned.wav,"{
+  ""expected_sample_rate_hz"": 16000,
+  ""expected_channels"": 1,
+  ""frame_length_s"": 0.025,
+  ""hop_length_s"": 0.01,
+  ""spectral_n_fft"": 512,
+  ""f0_method"": ""librosa.pyin"",
+  ""f0_frame_length"": 1024,
+  ""f0_hop_length"": 160,
+  ""f0_min_hz"": 75.0,
+  ""f0_max_hz"": 500.0,
+  ""n_mfcc"": 13,
+  ""n_mels"": 40,
+  ""pitch_range_hz"": [
+    75.0,
+    500.0
+  ],
+  ""hnr_time_step_s"": 0.01,
+  ""hnr_silence_threshold"": 0.1,
+  ""hnr_voicing_threshold"": 1.0,
+  ""cpps_trend"": ""Exponential decay"",
+  ""cpps_fit_method"": ""Robust"",
+  ""jitter_shimmer_status"": ""EXCLUDED (prototype: unreliable on running speech)"",
+  ""vad_noise_percentile"": 10,
+  ""vad_speech_percentile"": 90,
+  ""vad_threshold_margin_db"": 6.0,
+  ""vad_min_silence_run_ms"": 100,
+  ""vad_min_speech_run_ms"": 50,
+  ""pause_min_duration_ms"": 250,
+  ""pause_validation_duration_ms"": 1000,
+  ""syllable_peak_distance_frames"": 8,
+  ""syllable_peak_prominence_db"": 3.0,
+  ""syllable_rate_sane_range"": [
+    1.5,
+    8.0
+  ],
+  ""plausible_f0_mean_hz"": [
+    70.0,
+    300.0
+  ],
+  ""plausible_hnr_db"": [
+    -10.0,
+    40.0
+  ],
+  ""plausible_cpps_db"": [
+    0.0,
+    30.0
+  ],
+  ""plausible_speech_ratio_pct"": [
+    30.0,
+    95.0
+  ],
+  ""silence_pct_crosscheck_tolerance"": 10.0
+}",OK,,4.76
+2026-10-31T08:48:24Z,P06,E:\REU_DATA\SPEECH processed\speech\P06\P06_speech_cleaned.wav,"{
+  ""expected_sample_rate_hz"": 16000,
+  ""expected_channels"": 1,
+  ""frame_length_s"": 0.025,
+  ""hop_length_s"": 0.01,
+  ""spectral_n_fft"": 512,
+  ""f0_method"": ""librosa.pyin"",
+  ""f0_frame_length"": 1024,
+  ""f0_hop_length"": 160,
+  ""f0_min_hz"": 75.0,
+  ""f0_max_hz"": 500.0,
+  ""n_mfcc"": 13,
+  ""n_mels"": 40,
+  ""pitch_range_hz"": [
+    75.0,
+    500.0
+  ],
+  ""hnr_time_step_s"": 0.01,
+  ""hnr_silence_threshold"": 0.1,
+  ""hnr_voicing_threshold"": 1.0,
+  ""cpps_trend"": ""Exponential decay"",
+  ""cpps_fit_method"": ""Robust"",
+  ""jitter_shimmer_status"": ""EXCLUDED (prototype: unreliable on running speech)"",
+  ""vad_noise_percentile"": 10,
+  ""vad_speech_percentile"": 90,
+  ""vad_threshold_margin_db"": 6.0,
+  ""vad_min_silence_run_ms"": 100,
+  ""vad_min_speech_run_ms"": 50,
+  ""pause_min_duration_ms"": 250,
+  ""pause_validation_duration_ms"": 1000,
+  ""syllable_peak_distance_frames"": 8,
+  ""syllable_peak_prominence_db"": 3.0,
+  ""syllable_rate_sane_range"": [
+    1.5,
+    8.0
+  ],
+  ""plausible_f0_mean_hz"": [
+    70.0,
+    300.0
+  ],
+  ""plausible_hnr_db"": [
+    -10.0,
+    40.0
+  ],
+  ""plausible_cpps_db"": [
+    0.0,
+    30.0
+  ],
+  ""plausible_speech_ratio_pct"": [
+    30.0,
+    95.0
+  ],
+  ""silence_pct_crosscheck_tolerance"": 10.0
+}",OK,,18.67
+2026-10-31T08:48:24Z,P07,E:\REU_DATA\SPEECH processed\speech\P07\P07_speech_cleaned.wav,"{
+  ""expected_sample_rate_hz"": 16000,
+  ""expected_channels"": 1,
+  ""frame_length_s"": 0.025,
+  ""hop_length_s"": 0.01,
+  ""spectral_n_fft"": 512,
+  ""f0_method"": ""librosa.pyin"",
+  ""f0_frame_length"": 1024,
+  ""f0_hop_length"": 160,
+  ""f0_min_hz"": 75.0,
+  ""f0_max_hz"": 500.0,
+  ""n_mfcc"": 13,
+  ""n_mels"": 40,
+  ""pitch_range_hz"": [
+    75.0,
+    500.0
+  ],
+  ""hnr_time_step_s"": 0.01,
+  ""hnr_silence_threshold"": 0.1,
+  ""hnr_voicing_threshold"": 1.0,
+  ""cpps_trend"": ""Exponential decay"",
+  ""cpps_fit_method"": ""Robust"",
+  ""jitter_shimmer_status"": ""EXCLUDED (prototype: unreliable on running speech)"",
+  ""vad_noise_percentile"": 10,
+  ""vad_speech_percentile"": 90,
+  ""vad_threshold_margin_db"": 6.0,
+  ""vad_min_silence_run_ms"": 100,
+  ""vad_min_speech_run_ms"": 50,
+  ""pause_min_duration_ms"": 250,
+  ""pause_validation_duration_ms"": 1000,
+  ""syllable_peak_distance_frames"": 8,
+  ""syllable_peak_prominence_db"": 3.0,
+  ""syllable_rate_sane_range"": [
+    1.5,
+    8.0
+  ],
+  ""plausible_f0_mean_hz"": [
+    70.0,
+    300.0
+  ],
+  ""plausible_hnr_db"": [
+    -10.0,
+    40.0
+  ],
+  ""plausible_cpps_db"": [
+    0.0,
+    30.0
+  ],
+  ""plausible_speech_ratio_pct"": [
+    30.0,
+    95.0
+  ],
+  ""silence_pct_crosscheck_tolerance"": 10.0
+}",OK,,22.97
+2026-10-31T08:48:24Z,P08,E:\REU_DATA\SPEECH processed\speech\P08\P08_speech_cleaned.wav,"{
+  ""expected_sample_rate_hz"": 16000,
+  ""expected_channels"": 1,
+  ""frame_length_s"": 0.025,
+  ""hop_length_s"": 0.01,
+  ""spectral_n_fft"": 512,
+  ""f0_method"": ""librosa.pyin"",
+  ""f0_frame_length"": 1024,
+  ""f0_hop_length"": 160,
+  ""f0_min_hz"": 75.0,
+  ""f0_max_hz"": 500.0,
+  ""n_mfcc"": 13,
+  ""n_mels"": 40,
+  ""pitch_range_hz"": [
+    75.0,
+    500.0
+  ],
+  ""hnr_time_step_s"": 0.01,
+  ""hnr_silence_threshold"": 0.1,
+  ""hnr_voicing_threshold"": 1.0,
+  ""cpps_trend"": ""Exponential decay"",
+  ""cpps_fit_method"": ""Robust"",
+  ""jitter_shimmer_status"": ""EXCLUDED (prototype: unreliable on running speech)"",
+  ""vad_noise_percentile"": 10,
+  ""vad_speech_percentile"": 90,
+  ""vad_threshold_margin_db"": 6.0,
+  ""vad_min_silence_run_ms"": 100,
+  ""vad_min_speech_run_ms"": 50,
+  ""pause_min_duration_ms"": 250,
+  ""pause_validation_duration_ms"": 1000,
+  ""syllable_peak_distance_frames"": 8,
+  ""syllable_peak_prominence_db"": 3.0,
+  ""syllable_rate_sane_range"": [
+    1.5,
+    8.0
+  ],
+  ""plausible_f0_mean_hz"": [
+    70.0,
+    300.0
+  ],
+  ""plausible_hnr_db"": [
+    -10.0,
+    40.0
+  ],
+  ""plausible_cpps_db"": [
+    0.0,
+    30.0
+  ],
+  ""plausible_speech_ratio_pct"": [
+    30.0,
+    95.0
+  ],
+  ""silence_pct_crosscheck_tolerance"": 10.0
+}",OK,,25.61
+2026-10-31T08:48:24Z,P09,E:\REU_DATA\SPEECH processed\speech\P09\P09_speech_cleaned.wav,"{
+  ""expected_sample_rate_hz"": 16000,
+  ""expected_channels"": 1,
+  ""frame_length_s"": 0.025,
+  ""hop_length_s"": 0.01,
+  ""spectral_n_fft"": 512,
+  ""f0_method"": ""librosa.pyin"",
+  ""f0_frame_length"": 1024,
+  ""f0_hop_length"": 160,
+  ""f0_min_hz"": 75.0,
+  ""f0_max_hz"": 500.0,
+  ""n_mfcc"": 13,
+  ""n_mels"": 40,
+  ""pitch_range_hz"": [
+    75.0,
+    500.0
+  ],
+  ""hnr_time_step_s"": 0.01,
+  ""hnr_silence_threshold"": 0.1,
+  ""hnr_voicing_threshold"": 1.0,
+  ""cpps_trend"": ""Exponential decay"",
+  ""cpps_fit_method"": ""Robust"",
+  ""jitter_shimmer_status"": ""EXCLUDED (prototype: unreliable on running speech)"",
+  ""vad_noise_percentile"": 10,
+  ""vad_speech_percentile"": 90,
+  ""vad_threshold_margin_db"": 6.0,
+  ""vad_min_silence_run_ms"": 100,
+  ""vad_min_speech_run_ms"": 50,
+  ""pause_min_duration_ms"": 250,
+  ""pause_validation_duration_ms"": 1000,
+  ""syllable_peak_distance_frames"": 8,
+  ""syllable_peak_prominence_db"": 3.0,
+  ""syllable_rate_sane_range"": [
+    1.5,
+    8.0
+  ],
+  ""plausible_f0_mean_hz"": [
+    70.0,
+    300.0
+  ],
+  ""plausible_hnr_db"": [
+    -10.0,
+    40.0
+  ],
+  ""plausible_cpps_db"": [
+    0.0,
+    30.0
+  ],
+  ""plausible_speech_ratio_pct"": [
+    30.0,
+    95.0
+  ],
+  ""silence_pct_crosscheck_tolerance"": 10.0
+}",OK,,10.28
+2026-10-31T08:48:24Z,P10,E:\REU_DATA\SPEECH processed\speech\P10\P10_speech_cleaned.wav,"{
+  ""expected_sample_rate_hz"": 16000,
+  ""expected_channels"": 1,
+  ""frame_length_s"": 0.025,
+  ""hop_length_s"": 0.01,
+  ""spectral_n_fft"": 512,
+  ""f0_method"": ""librosa.pyin"",
+  ""f0_frame_length"": 1024,
+  ""f0_hop_length"": 160,
+  ""f0_min_hz"": 75.0,
+  ""f0_max_hz"": 500.0,
+  ""n_mfcc"": 13,
+  ""n_mels"": 40,
+  ""pitch_range_hz"": [
+    75.0,
+    500.0
+  ],
+  ""hnr_time_step_s"": 0.01,
+  ""hnr_silence_threshold"": 0.1,
+  ""hnr_voicing_threshold"": 1.0,
+  ""cpps_trend"": ""Exponential decay"",
+  ""cpps_fit_method"": ""Robust"",
+  ""jitter_shimmer_status"": ""EXCLUDED (prototype: unreliable on running speech)"",
+  ""vad_noise_percentile"": 10,
+  ""vad_speech_percentile"": 90,
+  ""vad_threshold_margin_db"": 6.0,
+  ""vad_min_silence_run_ms"": 100,
+  ""vad_min_speech_run_ms"": 50,
+  ""pause_min_duration_ms"": 250,
+  ""pause_validation_duration_ms"": 1000,
+  ""syllable_peak_distance_frames"": 8,
+  ""syllable_peak_prominence_db"": 3.0,
+  ""syllable_rate_sane_range"": [
+    1.5,
+    8.0
+  ],
+  ""plausible_f0_mean_hz"": [
+    70.0,
+    300.0
+  ],
+  ""plausible_hnr_db"": [
+    -10.0,
+    40.0
+  ],
+  ""plausible_cpps_db"": [
+    0.0,
+    30.0
+  ],
+  ""plausible_speech_ratio_pct"": [
+    30.0,
+    95.0
+  ],
+  ""silence_pct_crosscheck_tolerance"": 10.0
+}",OK,,11.77

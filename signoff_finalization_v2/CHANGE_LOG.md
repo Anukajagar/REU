@@ -83,3 +83,36 @@ No preprocessing was re-run; no ICA was refit; no raw or frozen artifact was mod
 15 APPROVED recordings, cleaned pre-ICA `*_eeg.fif` for the other 25; artifact-window
 registers remain skip-in-features everywhere. Audit-scope readiness labels (2 PASS /
 38 REVIEW) were not reopened. The acquisition reference remains UNKNOWN.
+
+---
+
+## Follow-up session (2026-11-01): final 2 sign-off decisions — gate now complete
+
+**Scope:** closed the last two `NEEDS_REVIEW` rows left open on 2026-10-14, then refreshed the
+summaries and status cells that still reported the 15/13/2 state. No preprocessing was re-run,
+no ICA was refit, no raw or frozen artifact was modified. Evidence for both decisions was the
+existing read-only figures (component map, timecourse, spectrum, before/after).
+
+| Outcome | Detail |
+|---|---|
+| `P07_maths` | `NEEDS_REVIEW` → **APPROVED**. IC0 confirmed as blink: forehead topography, EOG-proxy 0.978, pure low-frequency spectrum (HF removed 0.3%), posterior alpha *gained* 2.52%. The 72.52% variance cut is explained by 130–300 µV blink transients, not lost neural signal. |
+| `P08_meditation` | `NEEDS_REVIEW` → **REJECTED**. IC2 plausibly ocular, but IC5 identity unconfirmed (broad frontal, carries alpha) and 10.3% HF removed — highest in the dataset. Guards pass (alpha −10.56%, variance −18.09%) but visual evidence inconclusive; pre-ICA cleaned file stays the feature input. ICA file remains on disk for audit. |
+| `ica_review_table_v1.csv` | 2 rows updated (the only table written by the decisions); now **30/30 decided: 16 APPROVED / 14 REJECTED / 0 open** |
+| `ica_signoff_decisions_log_v1.csv` | +2 append-only entries (33 total) |
+| Validation gate | `VALIDATION PASSED` — `still pending (0): -` |
+| `eeg_qc_summary_v3.csv` / `.md` | **Rebuilt** (deliberate delete + rebuild, as the script requires): `feature_input_file` now 16 ICA fif / 24 cleaned fif, all 40 paths verified on disk; each row carries its own `review_date` instead of one assumed session date |
+| `MENTOR_SUMMARY.md`, `README.md` | Updated: sign-off gate marked complete; "what remains before feature extraction" now lists only QC-01 (reference) and QC-04 (interpolation policy), neither blocking |
+| `notebooks\EEG_Dataset_Analysis_and_Preprocessing_v4.ipynb` | V10 cells (91–93) refreshed to 16/14/0 with re-executed read-only output; the 90 frozen v3 cells re-verified identical and the v3 notebook hash unchanged |
+| `scripts\build_qc_summary_v3.py`, `scripts\update_notebook_v4_signoff_v3.py` | Updated for the final counts and per-row review dates (their hard-coded 15/13/2 assertions would otherwise fail) |
+
+**Not changed, deliberately:** `qc_issue_classification_v2` / `eeg_qc_summary_v2` /
+`validation_results_v2` remain the dated pre-sign-off snapshots (the classification builder
+asserts all rows are `NEEDS_REVIEW`, so it cannot be re-run against the final state) — the
+current record is `eeg_qc_summary_v3`. `audit_finalization_v1`, `reports_final_v3`, all
+evidence bundles, and the raw/cleaned/ICA `.fif` files are untouched.
+
+**Policy in force after this session:** feature input is per-recording from
+`eeg_qc_summary_v3.csv` — `*_eeg_ica.fif` for the 16 APPROVED, cleaned pre-ICA `*_eeg.fif`
+for the other 24; artifact-window registers remain skip-in-features everywhere; the 5 excluded
+ICA outputs stay excluded; no reference-sensitive feature until QC-01 closes. Audit-scope
+readiness labels (2 PASS / 38 REVIEW) were not reopened.

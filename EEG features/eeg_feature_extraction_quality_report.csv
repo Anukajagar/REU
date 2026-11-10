@@ -1,0 +1,26 @@
+check_id,check,status,value,detail
+Q01,EEG rows in QC summary,PASS,40,eeg_qc_summary_v3.csv
+Q02,Feature input files exist,PASS,40/40,paths in eeg_qc_summary_v3.csv
+Q03,All recordings have 24 channels,PASS,40/40,read from the .fif
+Q04,Feature-input policy (16 ICA / 24 cleaned),PASS,16 ICA / 24 cleaned,per-recording policy from eeg_qc_summary_v3.csv
+Q05,Artifact windows registered,PASS,931,audit_finalization_v1/eeg/artifact_log_v1.csv
+Q06,Minimum valid epochs per recording,PASS,30,"2 s epochs, 1 s step"
+Q07,No NaN/inf in channel-level features,PASS,0,rows with any missing feature
+Q08,Band powers non-negative,PASS,0,absolute band power rows
+Q09,Relative band powers sum to 1,PASS,max |dev|=3.33e-16,five contiguous bands
+Q10,Alpha peak inside 8-12 Hz,PASS,8.0-11.5 Hz,argmax of the alpha band
+Q11,No reference-sensitive features,PASS,0,Laplacian/CSD/connectivity are deferred until QC-01
+Q12,10 participants in each condition,PASS,"{""calm"": 10, ""maths"": 10, ""meditation"": 10, ""speech"": 10}",calm/meditation/maths/speech
+Q13,M1/M2 excluded from scalp aggregates,PASS,"['M1', 'M2']",channel-level rows retained for transparency
+Q14,No Dosha/Prakriti labels merged,PASS,0,labels remain provisional and separate
+Q15,No REJECTED ICA file used as input,PASS,0,feature_input_file policy
+Q16,No duplicate recording/channel rows,PASS,0,channel-level table
+Q17,Recording-level row count,PASS,40,40 recordings
+Q18,Participant-level row count,PASS,10,10 participants
+Q19,Epoch-level row count,PASS,382392 (expected 382392),valid epochs x 24 channels
+Q20,Input SHA-256 recorded,PASS,40/40,extraction log
+Q21,Feature ranges plausible,PASS,0 column(s) outside range,
+Q22,ICA/cleaned input mix confounds condition,WARN,16 ICA,input variant differs within participant across conditions; sensitivity analysis recommended
+Q23,Acquisition reference unknown,WARN,QC-01 open,no reference-sensitive features computed
+Q24,Dosha labels provisional,WARN,not merged,join participant_labels_v1.csv separately and label as provisional
+Q25,Speech-condition EEG is short,WARN,30.0-59.0 s,compare conditions with duration-aware methods

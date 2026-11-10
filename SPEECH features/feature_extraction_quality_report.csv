@@ -1,0 +1,146 @@
+participant_id,check,result,detail
+P01,missing_or_nan_features,PASS,all feature values present
+P01,infinite_values,PASS,no +/-inf
+P01,f0_mean_plausible,PASS,"f0_mean=129.5 Hz, expected 70.0-300.0 Hz"
+P01,f0_voiced_fraction,PASS,voiced 66.3% of frames
+P01,f0_within_search_range,PASS,observed 99.0-230.0 Hz (search 75.0-500.0 Hz)
+P01,hnr_plausible,PASS,"hnr=12.84 dB, expected -10.0-40.0 dB"
+P01,cpps_plausible,PASS,"cpps=7.55 dB, expected 0.0-30.0 dB"
+P01,speech_ratio_plausible,PASS,"speech 76.0%, expected 30.0-95.0%"
+P01,speaking_rate_estimate_sane,PASS,"speaking rate 3.13 syll/s (estimate), expected 1.5-8.0"
+P01,vad_vs_preprocessing_silence_pct,PASS,this run 24.0% silence vs preprocessing report 27.9% (diff 3.9 pp)
+P01,pause_count_ge1s_vs_preprocessing_report,PASS,this run 2 vs report 2 pauses >=1 s
+P01,documented_recording_limitation,PASS,none
+P02,missing_or_nan_features,PASS,all feature values present
+P02,infinite_values,PASS,no +/-inf
+P02,f0_mean_plausible,PASS,"f0_mean=112.8 Hz, expected 70.0-300.0 Hz"
+P02,f0_voiced_fraction,PASS,voiced 67.9% of frames
+P02,f0_within_search_range,PASS,observed 87.2-279.9 Hz (search 75.0-500.0 Hz)
+P02,hnr_plausible,PASS,"hnr=10.36 dB, expected -10.0-40.0 dB"
+P02,cpps_plausible,PASS,"cpps=7.92 dB, expected 0.0-30.0 dB"
+P02,speech_ratio_plausible,PASS,"speech 70.8%, expected 30.0-95.0%"
+P02,speaking_rate_estimate_sane,PASS,"speaking rate 3.22 syll/s (estimate), expected 1.5-8.0"
+P02,vad_vs_preprocessing_silence_pct,PASS,this run 29.2% silence vs preprocessing report 33.0% (diff 3.8 pp)
+P02,pause_count_ge1s_vs_preprocessing_report,PASS,this run 0 vs report 1 pauses >=1 s
+P02,documented_recording_limitation,PASS,none
+P03,missing_or_nan_features,PASS,all feature values present
+P03,infinite_values,PASS,no +/-inf
+P03,f0_mean_plausible,PASS,"f0_mean=120.6 Hz, expected 70.0-300.0 Hz"
+P03,f0_voiced_fraction,PASS,voiced 71.1% of frames
+P03,f0_within_search_range,PASS,observed 86.2-146.6 Hz (search 75.0-500.0 Hz)
+P03,hnr_plausible,PASS,"hnr=11.12 dB, expected -10.0-40.0 dB"
+P03,cpps_plausible,PASS,"cpps=8.29 dB, expected 0.0-30.0 dB"
+P03,speech_ratio_plausible,PASS,"speech 76.6%, expected 30.0-95.0%"
+P03,speaking_rate_estimate_sane,PASS,"speaking rate 3.72 syll/s (estimate), expected 1.5-8.0"
+P03,vad_vs_preprocessing_silence_pct,PASS,this run 23.4% silence vs preprocessing report 29.2% (diff 5.8 pp)
+P03,pause_count_ge1s_vs_preprocessing_report,PASS,this run 0 vs report 0 pauses >=1 s
+P03,documented_recording_limitation,PASS,none
+P04,missing_or_nan_features,PASS,all feature values present
+P04,infinite_values,PASS,no +/-inf
+P04,f0_mean_plausible,PASS,"f0_mean=160.6 Hz, expected 70.0-300.0 Hz"
+P04,f0_voiced_fraction,PASS,voiced 59.6% of frames
+P04,f0_within_search_range,PASS,observed 75.0-218.3 Hz (search 75.0-500.0 Hz)
+P04,hnr_plausible,PASS,"hnr=13.23 dB, expected -10.0-40.0 dB"
+P04,cpps_plausible,PASS,"cpps=6.64 dB, expected 0.0-30.0 dB"
+P04,speech_ratio_plausible,PASS,"speech 66.5%, expected 30.0-95.0%"
+P04,speaking_rate_estimate_sane,PASS,"speaking rate 3.12 syll/s (estimate), expected 1.5-8.0"
+P04,vad_vs_preprocessing_silence_pct,PASS,this run 33.5% silence vs preprocessing report 39.3% (diff 5.8 pp)
+P04,pause_count_ge1s_vs_preprocessing_report,PASS,this run 2 vs report 1 pauses >=1 s
+P04,documented_recording_limitation,PASS,none
+P05,missing_or_nan_features,PASS,all feature values present
+P05,infinite_values,PASS,no +/-inf
+P05,f0_mean_plausible,PASS,"f0_mean=124.9 Hz, expected 70.0-300.0 Hz"
+P05,f0_voiced_fraction,PASS,voiced 75.0% of frames
+P05,f0_within_search_range,PASS,observed 75.0-184.7 Hz (search 75.0-500.0 Hz)
+P05,hnr_plausible,PASS,"hnr=8.33 dB, expected -10.0-40.0 dB"
+P05,cpps_plausible,PASS,"cpps=6.95 dB, expected 0.0-30.0 dB"
+P05,speech_ratio_plausible,PASS,"speech 65.3%, expected 30.0-95.0%"
+P05,speaking_rate_estimate_sane,PASS,"speaking rate 3.07 syll/s (estimate), expected 1.5-8.0"
+P05,vad_vs_preprocessing_silence_pct,PASS,this run 34.7% silence vs preprocessing report 41.5% (diff 6.8 pp)
+P05,pause_count_ge1s_vs_preprocessing_report,PASS,this run 2 vs report 1 pauses >=1 s
+P05,documented_recording_limitation,WARN,"low estimated SNR (13.8 dB) — recording property, not a processing defect"
+P06,missing_or_nan_features,PASS,all feature values present
+P06,infinite_values,PASS,no +/-inf
+P06,f0_mean_plausible,PASS,"f0_mean=165.6 Hz, expected 70.0-300.0 Hz"
+P06,f0_voiced_fraction,PASS,voiced 48.6% of frames
+P06,f0_within_search_range,PASS,observed 76.3-358.8 Hz (search 75.0-500.0 Hz)
+P06,hnr_plausible,PASS,"hnr=16.25 dB, expected -10.0-40.0 dB"
+P06,cpps_plausible,PASS,"cpps=7.09 dB, expected 0.0-30.0 dB"
+P06,speech_ratio_plausible,PASS,"speech 64.7%, expected 30.0-95.0%"
+P06,speaking_rate_estimate_sane,PASS,"speaking rate 2.51 syll/s (estimate), expected 1.5-8.0"
+P06,vad_vs_preprocessing_silence_pct,PASS,this run 35.3% silence vs preprocessing report 39.3% (diff 4.0 pp)
+P06,pause_count_ge1s_vs_preprocessing_report,PASS,this run 7 vs report 8 pauses >=1 s
+P06,documented_recording_limitation,PASS,none
+P07,missing_or_nan_features,PASS,all feature values present
+P07,infinite_values,PASS,no +/-inf
+P07,f0_mean_plausible,PASS,"f0_mean=131.7 Hz, expected 70.0-300.0 Hz"
+P07,f0_voiced_fraction,PASS,voiced 70.4% of frames
+P07,f0_within_search_range,PASS,observed 103.0-167.4 Hz (search 75.0-500.0 Hz)
+P07,hnr_plausible,PASS,"hnr=12.54 dB, expected -10.0-40.0 dB"
+P07,cpps_plausible,PASS,"cpps=8.30 dB, expected 0.0-30.0 dB"
+P07,speech_ratio_plausible,PASS,"speech 75.3%, expected 30.0-95.0%"
+P07,speaking_rate_estimate_sane,PASS,"speaking rate 3.47 syll/s (estimate), expected 1.5-8.0"
+P07,vad_vs_preprocessing_silence_pct,PASS,this run 24.7% silence vs preprocessing report 29.0% (diff 4.3 pp)
+P07,pause_count_ge1s_vs_preprocessing_report,PASS,this run 0 vs report 0 pauses >=1 s
+P07,documented_recording_limitation,PASS,none
+P08,missing_or_nan_features,PASS,all feature values present
+P08,infinite_values,PASS,no +/-inf
+P08,f0_mean_plausible,PASS,"f0_mean=145.8 Hz, expected 70.0-300.0 Hz"
+P08,f0_voiced_fraction,PASS,voiced 55.5% of frames
+P08,f0_within_search_range,PASS,observed 117.0-227.4 Hz (search 75.0-500.0 Hz)
+P08,hnr_plausible,PASS,"hnr=13.07 dB, expected -10.0-40.0 dB"
+P08,cpps_plausible,PASS,"cpps=7.06 dB, expected 0.0-30.0 dB"
+P08,speech_ratio_plausible,PASS,"speech 62.4%, expected 30.0-95.0%"
+P08,speaking_rate_estimate_sane,PASS,"speaking rate 2.87 syll/s (estimate), expected 1.5-8.0"
+P08,vad_vs_preprocessing_silence_pct,PASS,this run 37.6% silence vs preprocessing report 41.1% (diff 3.5 pp)
+P08,pause_count_ge1s_vs_preprocessing_report,WARN,this run 5 vs report 7 pauses >=1 s
+P08,documented_recording_limitation,PASS,none
+P09,missing_or_nan_features,PASS,all feature values present
+P09,infinite_values,PASS,no +/-inf
+P09,f0_mean_plausible,PASS,"f0_mean=147.9 Hz, expected 70.0-300.0 Hz"
+P09,f0_voiced_fraction,PASS,voiced 74.8% of frames
+P09,f0_within_search_range,PASS,observed 122.5-235.4 Hz (search 75.0-500.0 Hz)
+P09,hnr_plausible,PASS,"hnr=15.68 dB, expected -10.0-40.0 dB"
+P09,cpps_plausible,PASS,"cpps=7.21 dB, expected 0.0-30.0 dB"
+P09,speech_ratio_plausible,PASS,"speech 75.5%, expected 30.0-95.0%"
+P09,speaking_rate_estimate_sane,PASS,"speaking rate 3.15 syll/s (estimate), expected 1.5-8.0"
+P09,vad_vs_preprocessing_silence_pct,PASS,this run 24.5% silence vs preprocessing report 30.0% (diff 5.5 pp)
+P09,pause_count_ge1s_vs_preprocessing_report,PASS,this run 0 vs report 0 pauses >=1 s
+P09,documented_recording_limitation,WARN,stereo level difference +10.1 dB (both channels kept via lag-aligned mean)
+P10,missing_or_nan_features,PASS,all feature values present
+P10,infinite_values,PASS,no +/-inf
+P10,f0_mean_plausible,PASS,"f0_mean=135.5 Hz, expected 70.0-300.0 Hz"
+P10,f0_voiced_fraction,PASS,voiced 57.4% of frames
+P10,f0_within_search_range,PASS,observed 107.9-179.4 Hz (search 75.0-500.0 Hz)
+P10,hnr_plausible,PASS,"hnr=12.04 dB, expected -10.0-40.0 dB"
+P10,cpps_plausible,PASS,"cpps=7.96 dB, expected 0.0-30.0 dB"
+P10,speech_ratio_plausible,PASS,"speech 72.8%, expected 30.0-95.0%"
+P10,speaking_rate_estimate_sane,PASS,"speaking rate 3.57 syll/s (estimate), expected 1.5-8.0"
+P10,vad_vs_preprocessing_silence_pct,PASS,this run 27.2% silence vs preprocessing report 30.7% (diff 3.5 pp)
+P10,pause_count_ge1s_vs_preprocessing_report,PASS,this run 1 vs report 1 pauses >=1 s
+P10,documented_recording_limitation,WARN,"clipping 0.003% of samples (right channel, verified per-channel); stereo level difference +11.7 dB (both channels kept via lag-aligned mean)"
+ALL,frame_table_f0_nan_matches_voicing,PASS,18127 non-finite f0 values == 18127 unvoiced frames (NaN only where voicing decision is False)
+ALL,frame_rms_dbfs_finite,PASS,0 non-finite values of 48962
+ALL,frame_spectral_centroid_hz_finite,PASS,0 non-finite values of 48962
+ALL,frame_spectral_bandwidth_hz_finite,PASS,0 non-finite values of 48962
+ALL,frame_spectral_rolloff85_hz_finite,PASS,0 non-finite values of 48962
+ALL,frame_zcr_finite,PASS,0 non-finite values of 48962
+ALL,frame_mfcc00_finite,PASS,0 non-finite values of 48962
+ALL,frame_mfcc01_finite,PASS,0 non-finite values of 48962
+ALL,frame_mfcc02_finite,PASS,0 non-finite values of 48962
+ALL,frame_mfcc03_finite,PASS,0 non-finite values of 48962
+ALL,frame_mfcc04_finite,PASS,0 non-finite values of 48962
+ALL,frame_mfcc05_finite,PASS,0 non-finite values of 48962
+ALL,frame_mfcc06_finite,PASS,0 non-finite values of 48962
+ALL,frame_mfcc07_finite,PASS,0 non-finite values of 48962
+ALL,frame_mfcc08_finite,PASS,0 non-finite values of 48962
+ALL,frame_mfcc09_finite,PASS,0 non-finite values of 48962
+ALL,frame_mfcc10_finite,PASS,0 non-finite values of 48962
+ALL,frame_mfcc11_finite,PASS,0 non-finite values of 48962
+ALL,frame_mfcc12_finite,PASS,0 non-finite values of 48962
+ALL,outliers_f0_mean_hz,PASS,0/10 recordings beyond 3xIQR (reported only - never removed)
+ALL,outliers_hnr_mean_db,PASS,0/10 recordings beyond 3xIQR (reported only - never removed)
+ALL,outliers_cpps_db,PASS,0/10 recordings beyond 3xIQR (reported only - never removed)
+ALL,outliers_speech_ratio_pct,PASS,0/10 recordings beyond 3xIQR (reported only - never removed)
+ALL,outliers_speaking_rate_sy_per_s_est,PASS,0/10 recordings beyond 3xIQR (reported only - never removed)
+ALL,outliers_spectral_centroid_mean_hz,WARN,1/10 recordings beyond 3xIQR (reported only - never removed)
